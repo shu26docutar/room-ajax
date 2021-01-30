@@ -1,0 +1,30 @@
+<%#= link_to new_room_path do %>
+    <%#<span class='material-icons' id="add-btn">add</span>%>
+<%# end %>
+
+
+<%
+=begin%>
+ <div class="room-form">
+    <%= form_with url: "/rooms", method: :post,id: "form" do |form| %>
+        <%= form.text_field :name, id: "name" %>
+        <%= form.submit '投稿する' , id: "submit" %>
+    <% end %>
+</div>
+
+<div class="list">
+</div>
+
+<% @rooms.each do |room| %>
+    <div class="post">
+        <div class="post-data">
+            <%= room.name %>
+        </div>
+    </div>
+<% end %> 
+<%
+=end%>
+
+<div class="room_area">
+    <%= room.name %>
+</div>

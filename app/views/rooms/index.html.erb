@@ -1,0 +1,17 @@
+<%
+=begin%>
+ <div class="container">
+    <div class="room-contents">
+        <div class="rooms">
+            <%= render "room" %>
+        </div>
+    </div> 
+</div> 
+<%
+=end%>
+
+<ul id="room-form">
+    <%= render @room %>
+</ul>
+
+<%= render partial: 'form', locals: { room: @room } %>
